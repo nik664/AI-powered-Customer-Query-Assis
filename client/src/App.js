@@ -15,7 +15,7 @@ function App() {
     setMessages(prev => [...prev, userMessage]);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/chat', {
+      const response = await axios.post('https://ai-powered-customer-query-assis.onrender.com/api/chat', {
         message: input
       });
       const botMessage = { text: response.data.message, sender: 'bot' };
